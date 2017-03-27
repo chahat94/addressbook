@@ -15,4 +15,8 @@ stage('BUILD')
          bat(/"${mvnHome}\bin\mvn" clean"/)
       }
 }
+stage('email')
+{
+    emailext attachLog: true, body: '', subject: 'yes man', to: 'chahat.nayyar08@gmail.com'
+}
 }
